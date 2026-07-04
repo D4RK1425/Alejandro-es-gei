@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://drht6g6k3624r"]
+
+[ext_resource type="PackedScene" uid="uid://dhk1nxwwobc6s" path="res://Scenes/enemy_base.tscn" id="1_8vyyk"]
+[ext_resource type="Script" uid="uid://bdratvskc3ylj" path="res://Scripts/Enemies/demon_eye.gd" id="2_f1tah"]
+[ext_resource type="Texture2D" uid="uid://cgptkd2j3fuw4" path="res://Assets/Sprites/Enemies/GandalfHardcore The Damned Enemies and NPCs/Demon eye.png" id="2_hn8dm"]
+[ext_resource type="Script" uid="uid://bhwuhxj7uk6vq" path="res://Scripts/Player/state_machine.gd" id="4_ao70l"]
+[ext_resource type="Script" uid="uid://dbcrr1emxk6g7" path="res://Scripts/Enemies/static_idle.gd" id="4_f1tah"]
+[ext_resource type="Script" uid="uid://6r3iij57v0qu" path="res://Scripts/Enemies/static_hurt.gd" id="5_v8m75"]
+[ext_resource type="Script" uid="uid://8xrgnfdnn2bj" path="res://Scripts/Enemies/enemy_explode.gd" id="6_vlua1"]
+[ext_resource type="Script" uid="uid://ys51fyxptv5q" path="res://Scripts/health_component.gd" id="7_vlua1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6m36"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sigcr"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_383ix"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y58j0"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i578p"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldq6j"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dgvr"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kflbd"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8k0k"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6gn8"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dy2l"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8bhw"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1tah"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8m75"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v632l"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ao70l"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlua1"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7lw5"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_don2i"]
+atlas = ExtResource("2_hn8dm")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h6m36"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6m36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sigcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_383ix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y58j0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i578p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldq6j")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dgvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kflbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8k0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6gn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dy2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8bhw")
+}],
+"loop": false,
+"name": &"Explode",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1tah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8m75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v632l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao70l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlua1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7lw5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_don2i")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
+
+[node name="Demon Eye" unique_id=1645625969 instance=ExtResource("1_8vyyk")]
+script = ExtResource("2_f1tah")
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=2064697535]
+position = Vector2(0, 9)
+sprite_frames = SubResource("SpriteFrames_h6m36")
+animation = &"Death"
+
+[node name="StateMachine" parent="." index="2" unique_id=1792126747]
+script = ExtResource("4_ao70l")
+
+[node name="Idle" parent="StateMachine" index="0" unique_id=1229485853]
+script = ExtResource("4_f1tah")
+
+[node name="Attack" parent="StateMachine" index="3" unique_id=992454070]
+script = ExtResource("6_vlua1")
+
+[node name="Hurt" parent="StateMachine" index="4" unique_id=1856936774]
+script = ExtResource("5_v8m75")
+
+[node name="HealthComponent" parent="." index="3" unique_id=2138636608]
+script = ExtResource("7_vlua1")
+
+[node name="Hurtbox" parent="." index="4" unique_id=543849826 node_paths=PackedStringArray("health_component")]
+health_component = NodePath("../HealthComponent")
