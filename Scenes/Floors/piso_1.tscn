@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://esyifn8umf4u" path="res://Scenes/demon_grunt_3.tscn" id="13_sj5kb"]
 [ext_resource type="PackedScene" uid="uid://dyvbw6ukmt1kj" path="res://Scenes/portal.tscn" id="14_48hah"]
 [ext_resource type="Script" uid="uid://cik23avb7j7c8" path="res://Scripts/floor_manager.gd" id="15_jx1xg"]
+[ext_resource type="PackedScene" uid="uid://blxy60hv2o8u1" path="res://Scenes/boss_demon_slime.tscn" id="15_lfain"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ndhll"]
 texture = ExtResource("1_y2rhu")
@@ -2209,6 +2210,9 @@ texture = ExtResource("6_txwji")
 [node name="Player" parent="." unique_id=1595108933 instance=ExtResource("7_2x1mr")]
 position = Vector2(59, 257)
 
+[node name="Portal" parent="." unique_id=1987029061 instance=ExtResource("14_48hah")]
+position = Vector2(3270, 271)
+
 [node name="EnemiesContainer" type="Node2D" parent="." unique_id=1408906812]
 
 [node name="Plague Fly" parent="EnemiesContainer" unique_id=1645625969 instance=ExtResource("8_h05n1")]
@@ -2229,8 +2233,9 @@ position = Vector2(2002, 282)
 [node name="Enemey Grunt 3" parent="EnemiesContainer" unique_id=1404463984 instance=ExtResource("13_sj5kb")]
 position = Vector2(2878, 255)
 
-[node name="Portal" parent="." unique_id=1987029061 instance=ExtResource("14_48hah")]
-position = Vector2(3270, 271)
+[node name="BossDemonSlime" parent="EnemiesContainer" unique_id=1971314079 instance=ExtResource("15_lfain")]
+position = Vector2(229, 284)
+slime_speed = 60.0
 
 [node name="FloorManager" type="Node" parent="." unique_id=222348312]
 script = ExtResource("15_jx1xg")

@@ -1,12 +1,8 @@
 [gd_scene format=4 uid="uid://cmhrotkmnmq4t"]
 
 [ext_resource type="Texture2D" uid="uid://btdib7xkbbyhp" path="res://Assets/Sprites/Materiales/GandalfHardcore Hell Tiles 32x32.png" id="1_iti4p"]
-[ext_resource type="PackedScene" uid="uid://dby4l5xs3u55w" path="res://Scenes/demon_grunt_2.tscn" id="2_btda1"]
-[ext_resource type="PackedScene" uid="uid://yepiy83epf7c" path="res://Scenes/demon_grunt.tscn" id="3_xq3o0"]
-[ext_resource type="PackedScene" uid="uid://esyifn8umf4u" path="res://Scenes/demon_grunt_3.tscn" id="4_2yvf5"]
-[ext_resource type="PackedScene" uid="uid://dhlp4bf5fcxc5" path="res://Scenes/demon_grunt_4.tscn" id="5_3ihge"]
+[ext_resource type="PackedScene" uid="uid://blxy60hv2o8u1" path="res://Scenes/boss_demon_slime.tscn" id="3_eglq2"]
 [ext_resource type="PackedScene" uid="uid://cp8fhtaj28p4f" path="res://Scenes/player.tscn" id="6_akkqd"]
-[ext_resource type="Texture2D" uid="uid://cejj80x363oxm" path="res://Assets/Sprites/Enemies/GandalfHardcore The Damned Enemies and NPCs/Cheeky Devil.png" id="7_xq3o0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dtjkg"]
 texture = ExtResource("1_iti4p")
@@ -570,84 +566,6 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_dtjkg")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2yvf5"]
-atlas = ExtResource("7_xq3o0")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3ihge"]
-atlas = ExtResource("7_xq3o0")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_akkqd"]
-atlas = ExtResource("7_xq3o0")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8v7by"]
-atlas = ExtResource("7_xq3o0")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1rqgg"]
-atlas = ExtResource("7_xq3o0")
-region = Rect2(256, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mwmob"]
-atlas = ExtResource("7_xq3o0")
-region = Rect2(320, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_so54a"]
-atlas = ExtResource("7_xq3o0")
-region = Rect2(384, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sw8nc"]
-atlas = ExtResource("7_xq3o0")
-region = Rect2(448, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x6ft1"]
-atlas = ExtResource("7_xq3o0")
-region = Rect2(512, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p51s7"]
-atlas = ExtResource("7_xq3o0")
-region = Rect2(576, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_fbmvr"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2yvf5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3ihge")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_akkqd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8v7by")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1rqgg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mwmob")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_so54a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sw8nc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x6ft1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p51s7")
-}],
-"loop": true,
-"name": &"default",
-"speed": 14.0
-}]
-
 [node name="TestLevel" type="Node2D" unique_id=328364565]
 position = Vector2(4, 14)
 
@@ -655,22 +573,9 @@ position = Vector2(4, 14)
 tile_map_data = PackedByteArray("AAAAACgAAAAAAAAAAAABACgAAAABAAAAAAACACgAAAACAAAAAAADACgAAAADAAAAAAAEACgAAAAEAAAAAAAFACgAAAACAAAAAAAGACgAAAADAAAAAAAHACgAAAAEAAAAAAAIACgAAAACAAAAAAAJACgAAAADAAAAAAAKACgAAAAEAAAAAAALACgAAAACAAAAAAAMACgAAAADAAAAAAANACgAAAAEAAAAAAAOACgAAAACAAAAAAAPACgAAAADAAAAAAAQACgAAAAEAAAAAAARACgAAAACAAAAAAASACgAAAADAAAAAAATACgAAAAEAAAAAAAUACgAAAACAAAAAAAVACgAAAADAAAAAAAWACgAAAAEAAAAAAAXACgAAAACAAAAAAAYACgAAAADAAAAAAAZACgAAAAEAAAAAAAaACgAAAACAAAAAAAbACgAAAADAAAAAAAcACgAAAAEAAAAAAAdACcAAAAeAAEAAAAdACgAAAAeAAIAAAAdACkAAAAeAAMAAAAeACYAAAAfAAAAAAAeACcAAAAfAAEAAAAeACgAAAAfAAIAAAAeACkAAAAfAAMAAAAfACUAAAAeAAEAAAAfACYAAAAeAAIAAAAfACcAAAAeAAMAAAAgACQAAAAfAAAAAAAgACUAAAAfAAEAAAAgACYAAAAfAAIAAAAgACcAAAAfAAMAAAAhACQAAAAHAAAAAAAiACQAAAAIAAAAAAAjACQAAAAJAAAAAAAkACQAAAAHAAAAAAAlACQAAAAIAAAAAAAmACQAAAAJAAAAAAAnACQAAAAgAAAAAAAnACUAAAAgAAEAAAAnACYAAAAgAAIAAAAnACcAAAAgAAMAAAAoACUAAAAhAAEAAAAoACYAAAAhAAIAAAAoACcAAAAhAAMAAAApACYAAAAgAAAAAAApACcAAAAgAAEAAAApACgAAAAgAAIAAAApACkAAAAgAAMAAAAqACcAAAAhAAEAAAAqACgAAAAhAAIAAAAqACkAAAAhAAMAAAA=")
 tile_set = SubResource("TileSet_eglq2")
 
-[node name="Demon Grunt 3" parent="." unique_id=111778785 instance=ExtResource("4_2yvf5")]
-position = Vector2(478, 585)
-
-[node name="Demon Grunt" parent="." unique_id=1844336334 instance=ExtResource("3_xq3o0")]
-position = Vector2(381, 605)
-
-[node name="Demon Grunt 2" parent="." unique_id=1645625969 instance=ExtResource("2_btda1")]
-position = Vector2(306.87674, 598.07477)
-
-[node name="Demon Grunt 4" parent="." unique_id=355866389 instance=ExtResource("5_3ihge")]
-position = Vector2(518.8792, 509.91653)
-
 [node name="Player" parent="." unique_id=1595108933 instance=ExtResource("6_akkqd")]
 position = Vector2(22.747375, 596.35376)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=737910221]
-position = Vector2(137, 609)
-sprite_frames = SubResource("SpriteFrames_fbmvr")
-frame_progress = 0.7485597
+[node name="BossDemonSlime" parent="." unique_id=1971314079 instance=ExtResource("3_eglq2")]
+position = Vector2(346, 628)
+max_health = 300
