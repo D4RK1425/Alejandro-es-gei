@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://bp1wtw4l3ket1"]
+
+[ext_resource type="FontFile" uid="uid://bvyoj5numwgwx" path="res://Assets/Fonts/DungeonFont.ttf" id="1_woeg8"]
+
+[resource]
+default_font = ExtResource("1_woeg8")
+default_font_size = 16

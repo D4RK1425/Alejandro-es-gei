@@ -1,18 +1,18 @@
 [gd_scene format=4 uid="uid://dgekunkweaq83"]
 
-[ext_resource type="Script" uid="uid://cik23avb7j7c8" path="res://Scripts/floor_manager.gd" id="1_imfwv"]
+[ext_resource type="Script" uid="uid://cik23avb7j7c8" path="res://Scripts/Managers/floor_manager.gd" id="1_imfwv"]
 [ext_resource type="Texture2D" uid="uid://cejj80x363oxm" path="res://Assets/Sprites/Enemies/GandalfHardcore The Damned Enemies and NPCs/Cheeky Devil.png" id="1_w4hsf"]
 [ext_resource type="Texture2D" uid="uid://dbkmhucfsdybk" path="res://Assets/Sprites/Materiales/PixelFantasy_Caves_1.0/props2.png" id="2_lq3vo"]
 [ext_resource type="Texture2D" uid="uid://ceghd43658xaj" path="res://Assets/Sprites/Materiales/PixelFantasy_Caves_1.0/props1.png" id="3_01xpr"]
 [ext_resource type="Texture2D" uid="uid://djdqgwb8dkbcs" path="res://Assets/Sprites/Materiales/PixelFantasy_Caves_1.0/mainlev_build.png" id="4_lbai3"]
-[ext_resource type="PackedScene" uid="uid://bqqftagprfhm7" path="res://Scenes/plague_fly.tscn" id="5_g83d1"]
-[ext_resource type="PackedScene" uid="uid://yepiy83epf7c" path="res://Scenes/demon_grunt.tscn" id="6_e66xe"]
-[ext_resource type="PackedScene" uid="uid://dby4l5xs3u55w" path="res://Scenes/demon_grunt_2.tscn" id="7_slsjq"]
-[ext_resource type="PackedScene" uid="uid://bufrt6x4a0b0d" path="res://Scenes/demon_bloated.tscn" id="8_5kdfd"]
-[ext_resource type="PackedScene" uid="uid://dqpef8fbl5ent" path="res://Scenes/demon_mine.tscn" id="9_k38eo"]
-[ext_resource type="PackedScene" uid="uid://esyifn8umf4u" path="res://Scenes/demon_grunt_3.tscn" id="10_llg0x"]
+[ext_resource type="PackedScene" uid="uid://bqqftagprfhm7" path="res://Scenes/Enemies/plague_fly.tscn" id="5_g83d1"]
+[ext_resource type="PackedScene" uid="uid://yepiy83epf7c" path="res://Scenes/Enemies/demon_grunt.tscn" id="6_e66xe"]
+[ext_resource type="PackedScene" uid="uid://dby4l5xs3u55w" path="res://Scenes/Enemies/demon_grunt_2.tscn" id="7_slsjq"]
+[ext_resource type="PackedScene" uid="uid://bufrt6x4a0b0d" path="res://Scenes/Enemies/demon_bloated.tscn" id="8_5kdfd"]
+[ext_resource type="PackedScene" uid="uid://dqpef8fbl5ent" path="res://Scenes/Enemies/demon_mine.tscn" id="9_k38eo"]
+[ext_resource type="PackedScene" uid="uid://esyifn8umf4u" path="res://Scenes/Enemies/demon_grunt_3.tscn" id="10_llg0x"]
 [ext_resource type="PackedScene" uid="uid://cp8fhtaj28p4f" path="res://Scenes/player.tscn" id="12_e66xe"]
-[ext_resource type="PackedScene" uid="uid://dyvbw6ukmt1kj" path="res://Scenes/portal.tscn" id="13_slsjq"]
+[ext_resource type="PackedScene" uid="uid://dyvbw6ukmt1kj" path="res://Scenes/Floors/portal.tscn" id="13_slsjq"]
 [ext_resource type="Texture2D" uid="uid://wrg2awb7iyap" path="res://Assets/Sprites/Fondos/Background layer.png" id="14_w4hsf"]
 [ext_resource type="Texture2D" uid="uid://efrs0mmy8hyn" path="res://Assets/Sprites/Fondos/back layer.png" id="15_3rvy1"]
 [ext_resource type="Texture2D" uid="uid://1rk183rihgew" path="res://Assets/Sprites/Fondos/middle layer.png" id="16_nsx4a"]
@@ -9735,6 +9735,7 @@ tile_map_data = PackedByteArray("AAAqABEAAAAEADoAABAqABIAAAAEADsAABArABEAAAADADo
 tile_set = SubResource("TileSet_e2io7")
 
 [node name="gyale" type="TileMapLayer" parent="." unique_id=1428719501]
+visible = false
 tile_map_data = PackedByteArray("AAAbAAYAAAABAAEAAAAbAAcAAAABAAIAAAAbAAgAAAABAAMAAAAcAAYAAAACAAEAAAAcAAcAAAACAAIAAAAcAAgAAAACAAMAAAA7AAoAAAABAAEAAAA7AAsAAAABAAIAAAA7AAwAAAABAAMAAAA8AAoAAAACAAEAAAA8AAsAAAACAAIAAAA8AAwAAAACAAMAAACiAAcAAAABAAEAAACiAAgAAAABAAIAAACiAAkAAAABAAMAAACjAAcAAAACAAEAAACjAAgAAAACAAIAAACjAAkAAAACAAMAAAAQAAsAAAABAAEAAAAQAAwAAAABAAIAAAAQAA0AAAABAAMAAAARAAsAAAACAAEAAAARAAwAAAACAAIAAAARAA0AAAACAAMAAAA=")
 tile_set = SubResource("TileSet_nsx4a")
 
@@ -9772,7 +9773,7 @@ portal = NodePath("../Portal")
 position = Vector2(90, 191)
 
 [node name="Portal" parent="." unique_id=1987029061 instance=ExtResource("13_slsjq")]
-position = Vector2(2754.954, 137.33144)
+position = Vector2(2759, 136)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1079865586]
 

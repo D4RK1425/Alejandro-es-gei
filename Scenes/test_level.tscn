@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cmhrotkmnmq4t"]
 
 [ext_resource type="Texture2D" uid="uid://btdib7xkbbyhp" path="res://Assets/Sprites/Materiales/GandalfHardcore Hell Tiles 32x32.png" id="1_iti4p"]
-[ext_resource type="PackedScene" uid="uid://blxy60hv2o8u1" path="res://Scenes/boss_demon_slime.tscn" id="3_eglq2"]
+[ext_resource type="PackedScene" uid="uid://blxy60hv2o8u1" path="res://Scenes/Enemies/boss_demon_slime.tscn" id="3_eglq2"]
 [ext_resource type="PackedScene" uid="uid://cp8fhtaj28p4f" path="res://Scenes/player.tscn" id="6_akkqd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dtjkg"]

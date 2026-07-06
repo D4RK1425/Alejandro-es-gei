@@ -1,0 +1,289 @@
+[gd_scene format=3 uid="uid://gcwpl0kac2tl"]
+
+[ext_resource type="Script" uid="uid://qhpmvligy8eo" path="res://Scripts/UI/main_menu.gd" id="1_28flt"]
+[ext_resource type="Theme" uid="uid://bp1wtw4l3ket1" path="res://Assets/UI/main_theme.tres" id="1_mrfpk"]
+[ext_resource type="Texture2D" uid="uid://d4jextslf5rpa" path="res://Assets/UI/UI_assets/Menu Background.png" id="2_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://cajbrveikl2en" path="res://Assets/UI/UI_assets/ButtonBox.png" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://db7b6eo6v0t18" path="res://Assets/UI/UI_assets/Ember.png" id="4_lrjdf"]
+[ext_resource type="StyleBox" uid="uid://tgd77s4y8lff" path="res://Assets/UI/ButtonOffTheme.tres" id="5_gih0s"]
+[ext_resource type="Texture2D" uid="uid://7lceu1mwwnj" path="res://Assets/UI/UI_assets/BotonAct.png" id="6_gih0s"]
+[ext_resource type="StyleBox" uid="uid://c8hf8lnymse3r" path="res://Assets/UI/ButtonOnTheme.tres" id="6_k33u3"]
+[ext_resource type="Texture2D" uid="uid://dkwdx2ywymyuk" path="res://Assets/UI/UI_assets/Titulo2.png" id="8_k33u3"]
+[ext_resource type="StyleBox" uid="uid://cyxp2moh50ice" path="res://Assets/UI/BoxTheme.tres" id="10_wqme5"]
+[ext_resource type="AudioStream" uid="uid://bdbha56bewqn0" path="res://Assets/Sound/select_2.wav" id="11_jewm6"]
+[ext_resource type="AudioStream" uid="uid://benxqcvkcqb1m" path="res://Assets/Sound/02-TIT~1.WAV" id="12_cejvf"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wqme5"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(700, 400, 1)
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+initial_velocity_min = 20.0
+initial_velocity_max = 60.0
+gravity = Vector3(15, -20, 0)
+scale_min = 0.01
+scale_max = 0.01
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k33u3"]
+texture = ExtResource("6_gih0s")
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
+[node name="MainMenu" type="Control" unique_id=776357991]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mrfpk")
+script = ExtResource("1_28flt")
+controls_panel_path = NodePath("ControlsPanel")
+credits_panel_path = NodePath("CreditsPanel")
+configuration_panel_path = NodePath("ConfigurationPanel")
+
+[node name="MenuBackground" type="Sprite2D" parent="." unique_id=190288196]
+position = Vector2(640.5, 359.875)
+scale = Vector2(0.7649521, 0.7632837)
+texture = ExtResource("2_ce3w2")
+
+[node name="EmbersParticles" type="GPUParticles2D" parent="." unique_id=592519676]
+z_index = 1
+position = Vector2(639, 363.00003)
+scale = Vector2(0.91649115, 0.93025327)
+amount = 120
+texture = ExtResource("4_lrjdf")
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource("ParticleProcessMaterial_wqme5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1552581508]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.31300002
+anchor_top = 0.272
+anchor_right = 0.61200005
+anchor_bottom = 0.637
+offset_left = 55.359985
+offset_top = 74.15999
+offset_right = -90.02667
+offset_bottom = -11.306549
+scale = Vector2(1.5, 1.5)
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="ButtonBox" type="Sprite2D" parent="VBoxContainer" unique_id=721170945]
+position = Vector2(117.99998, 89.33332)
+scale = Vector2(0.29742172, 0.22118154)
+texture = ExtResource("3_1ehe0")
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=410119237]
+visible = false
+layout_mode = 2
+text = "DEMON SLAYER: ABYSS TOWER"
+
+[node name="Iniciar" type="Button" parent="VBoxContainer" unique_id=933854931]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("5_gih0s")
+theme_override_styles/pressed = ExtResource("6_k33u3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k33u3")
+text = "Iniciar"
+
+[node name="Controles" type="Button" parent="VBoxContainer" unique_id=1247130900]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("5_gih0s")
+theme_override_styles/pressed = ExtResource("6_k33u3")
+theme_override_styles/hover = ExtResource("6_k33u3")
+text = "Controles"
+
+[node name="Configuracion" type="Button" parent="VBoxContainer" unique_id=1040426067]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("5_gih0s")
+theme_override_styles/pressed = ExtResource("6_k33u3")
+theme_override_styles/hover = ExtResource("6_k33u3")
+text = "Configuracion
+"
+
+[node name="Creditos" type="Button" parent="VBoxContainer" unique_id=2138294301]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("5_gih0s")
+theme_override_styles/pressed = ExtResource("6_k33u3")
+theme_override_styles/hover = ExtResource("6_k33u3")
+text = "Creditos"
+
+[node name="Salir" type="Button" parent="VBoxContainer" unique_id=2116241077]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("5_gih0s")
+theme_override_styles/pressed = ExtResource("6_k33u3")
+theme_override_styles/hover = ExtResource("6_k33u3")
+text = "Salir"
+
+[node name="Titulo2" type="Sprite2D" parent="VBoxContainer" unique_id=1310833588]
+position = Vector2(116, -86)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_k33u3")
+
+[node name="ControlsPanel" type="Panel" parent="." unique_id=1128131797]
+visible = false
+z_index = 3
+layout_mode = 0
+offset_left = 441.0
+offset_top = 214.0
+offset_right = 822.0
+offset_bottom = 596.0
+theme_override_styles/panel = ExtResource("10_wqme5")
+
+[node name="Label" type="Label" parent="ControlsPanel" unique_id=1642144052]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -149.5
+offset_top = 80.0
+offset_right = 115.114624
+offset_bottom = 269.0
+grow_horizontal = 2
+scale = Vector2(0.9750029, 1.0889688)
+theme_override_font_sizes/font_size = 26
+text = "Controles
+
+Moverse: A / D
+Saltar: Espacio
+Atacar: J - Click Izquierdo
+Sprint: Shift Izquierdo
+Pausar: Esc"
+autowrap_mode = 2
+
+[node name="Volver" type="Button" parent="ControlsPanel" unique_id=1023933192]
+z_index = 3
+layout_mode = 0
+offset_left = 111.0
+offset_top = 292.0
+offset_right = 274.0
+offset_bottom = 331.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("5_gih0s")
+theme_override_styles/pressed = ExtResource("6_k33u3")
+theme_override_styles/hover = ExtResource("6_k33u3")
+text = "Volver"
+
+[node name="CreditsPanel" type="Panel" parent="." unique_id=1378227944]
+visible = false
+z_index = 3
+layout_mode = 0
+offset_left = 440.0
+offset_top = 226.0
+offset_right = 823.0
+offset_bottom = 596.0
+theme_override_styles/panel = ExtResource("10_wqme5")
+
+[node name="Label" type="Label" parent="CreditsPanel" unique_id=1896479120]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 65.0
+offset_right = 277.0
+offset_bottom = 254.0
+theme_override_font_sizes/font_size = 26
+text = "Creditos
+
+Desarrollado por:
+Jafet Ovalle
+Alejandro Muñoz
+Moises Castillo
+
+1IL142"
+
+[node name="Volver" type="Button" parent="CreditsPanel" unique_id=1525355272]
+z_index = 3
+layout_mode = 0
+offset_left = 112.0
+offset_top = 264.0
+offset_right = 275.0
+offset_bottom = 303.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("5_gih0s")
+theme_override_styles/pressed = ExtResource("6_k33u3")
+theme_override_styles/hover = ExtResource("6_k33u3")
+text = "Volver"
+
+[node name="ConfigurationPanel" type="Panel" parent="." unique_id=704210690]
+z_index = 4
+layout_mode = 0
+offset_left = 442.0
+offset_top = 216.0
+offset_right = 824.0
+offset_bottom = 589.0
+theme_override_styles/panel = ExtResource("10_wqme5")
+
+[node name="Label" type="Label" parent="ConfigurationPanel" unique_id=1437951631]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 65.0
+offset_right = 277.0
+offset_bottom = 254.0
+theme_override_font_sizes/font_size = 26
+text = "Configuracion"
+
+[node name="Volver" type="Button" parent="ConfigurationPanel" unique_id=412857282]
+z_index = 3
+layout_mode = 0
+offset_left = 111.0
+offset_top = 292.0
+offset_right = 274.0
+offset_bottom = 331.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("5_gih0s")
+theme_override_styles/pressed = ExtResource("6_k33u3")
+theme_override_styles/hover = ExtResource("6_k33u3")
+text = "Volver"
+
+[node name="MasterVolumeSlider" type="HSlider" parent="ConfigurationPanel" unique_id=695110584]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="MusicVolumeSlider" type="HSlider" parent="ConfigurationPanel" unique_id=645749498]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="SFXVolumeSlider" type="HSlider" parent="ConfigurationPanel" unique_id=935974965]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="ParticlesCheckBox" type="CheckButton" parent="ConfigurationPanel" unique_id=68261052]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 176.0
+offset_right = 136.0
+offset_bottom = 200.0
+button_pressed = true
+text = "Particulas"
+
+[node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=37576902]
+stream = ExtResource("11_jewm6")
+bus = &"SFX"
+
+[node name="MainMenuMusic" type="AudioStreamPlayer" parent="." unique_id=1724999741]
+stream = ExtResource("12_cejvf")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="VBoxContainer/Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Controles" to="." method="_on_controles_pressed"]
+[connection signal="pressed" from="VBoxContainer/Configuracion" to="." method="_on_configuracion_pressed"]
+[connection signal="pressed" from="VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="ControlsPanel/Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="CreditsPanel/Volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="ConfigurationPanel/Volver" to="." method="_on_volver_pressed"]

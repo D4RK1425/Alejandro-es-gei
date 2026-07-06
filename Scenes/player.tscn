@@ -2241,4 +2241,4 @@ script = ExtResource("17_igrcy")
 [node name="InvulnerabilityTimer" type="Timer" parent="." unique_id=1880733950]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=681921949]
-zoom = Vector2(2, 2)
+zoom = Vector2(2.5, 2.5)
