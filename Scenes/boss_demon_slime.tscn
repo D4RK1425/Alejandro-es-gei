@@ -566,6 +566,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivwlm"]
+size = Vector2(20, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3uvf"]
 
@@ -585,7 +586,7 @@ sprite_frames = SubResource("SpriteFrames_342dx")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=471203899]
-position = Vector2(0, -23)
+position = Vector2(0, -25)
 shape = SubResource("RectangleShape2D_ivwlm")
 
 [node name="StateMachine" type="Node" parent="." unique_id=342632739]
