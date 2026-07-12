@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED := 120.0
 const RUN_SPEED := 200.0
-const JUMP_VELOCITY := -300.0
+const JUMP_VELOCITY := -350.0
 const GRAVITY := 800.0
 const INVULNERABILITY_TIME := 0.5
 
